@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+NHẬP SỐ 1
+<input type="number" id="n1"><br><br>
+NHẬP SỐ 2
+<input type="number" id="n2"><br><br>
+<select id="n3">
+    <option>+</option>
+    <option>-</option>
+    <option>*</option>
+    <option>\</option>
+    </select>
+ result <input type="text" id="result">
+<button onclick="myfunction()">kết quả</button>
+<script type="text/javascript">
+    function myfunction(){
+        var n1 = document.getElementById('n1').value;
+        var n2 = document.getElementById('n2').value;
+        var n3 = document.getElementById('n3').value;
+
+        var result = 0;
+        if(n3 == "+"){
+            result = parseInt(n1) + parseInt(n2);
+        }else if (n3 == "-"){
+            result = parseInt(n1) - parseInt(n2);
+        }
+        else if (n3 == "*"){
+            result = parseInt(n1) * parseInt(n2);
+        }
+        else {
+            result = parseInt(n1)  parseInt(n2);
+        }
+        document.getElementById('result').value = result;
+    }
+</script>
+</body>
+</html>
